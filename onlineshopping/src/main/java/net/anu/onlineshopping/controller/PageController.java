@@ -13,7 +13,8 @@ public class PageController {
 	@RequestMapping(value= {"/","/home","/index"})
 	public ModelAndView index() {
 		ModelAndView mv= new ModelAndView("page");
-		mv.addObject("greeting", "Welcome in Spring MVC");
+		mv.addObject("title", "Home");
+		mv.addObject("userClickHome",true);
 		return mv;
 	}
 
@@ -25,7 +26,7 @@ public class PageController {
 		
 	}*/
 	
-	@RequestMapping(value="/test/{greeting}")
+/*	@RequestMapping(value="/test/{greeting}")
 	public ModelAndView test2(@PathVariable("greeting")String greeting){
 		if(greeting==null) {
 			greeting="Hello I'm Here";
@@ -34,6 +35,6 @@ public class PageController {
 		mv.addObject("greeting",greeting);
 		return mv;
 		
-	}
+	}*/
 
 }
